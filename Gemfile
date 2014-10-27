@@ -3,12 +3,17 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 
-group :production, :staging do
-  gem "pg"
-end
+# group :production, :staging do
+# gem 'pg'
+# end
 
 group :development, :test do
-  gem "sqlite3"
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 group :test do
